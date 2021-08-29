@@ -21,12 +21,10 @@ namespace ScriptingParcial1
     {
         public int vX, vY;
         public Vector2D(int X, int Y) {
-            vX = Y;
-            vY = X;
+            vX = Y; vY = X;
         }
         public Vector2D CorrectionPos(Vector2D vector) {
-            int eX = vX + vector.vX;
-            int eY = vY + vector.vY;
+            int eX = vX + vector.vX; eY = vY + vector.vY;
             Vector2D solution = new Vector2D(eX, eY);
             return solution;
         }
@@ -99,7 +97,7 @@ namespace ScriptingParcial1
                         Console.Write("X");
                     }
                 }
-                Console.WriteLine("");
+                Console.WriteLine(" ");
             }
         }
         public void BFS() {
@@ -110,9 +108,7 @@ namespace ScriptingParcial1
             }
         }
         public void ReachindEnd() {
-            if (pExploration == End) {
-                exploring = false;
-            }
+            if (pExploration == End) exploring = false;
             else {
                 exploring = true;
             }
