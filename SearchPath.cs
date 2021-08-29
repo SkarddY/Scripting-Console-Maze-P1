@@ -14,7 +14,7 @@ namespace ScriptingParcial1
             location = new Vector2D(x, y);
         }
         public override string ToString() {
-            return ("Explored: " + explore + "Ubication: " + location);
+            return ("Explored: " + explore + "Location: " + location);
         }
     }
     public struct Vector2D
@@ -63,7 +63,8 @@ namespace ScriptingParcial1
                 Console.WriteLine("Please write the last coordinate for X = "); xEnd = int.Parse(Console.ReadLine()); Console.WriteLine("Please write the last coordinate for Y =  "); yEnd = int.Parse(Console.ReadLine());
 
                 if (xFirst < 0 || xEnd < 0 || yFirst < 0 || yEnd < 0 || xFirst > mazeSize || yFirst > mazeSize || xEnd > mazeSize || yEnd > mazeSize) Console.WriteLine("Escriba valores dentro del limite de 25 Write values within the limit of 25");
-            } while (xFirst < 0 || xEnd < 0 || yFirst < 0 || yEnd < 0 || xFirst > mazeSize || yFirst > mazeSize || xEnd > mazeSize || yEnd > mazeSize);
+            } 
+            while (xFirst < 0 || xEnd < 0 || yFirst < 0 || yEnd < 0 || xFirst > mazeSize || yFirst > mazeSize || xEnd > mazeSize || yEnd > mazeSize);
 
             Vector2D nInitial = new Vector2D(xFirst, yFirst);
             Vector2D nEnd = new Vector2D(xEnd, yEnd);
